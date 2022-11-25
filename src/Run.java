@@ -36,10 +36,11 @@ public class Run extends WindowProgram implements Constants {
         while (ball.isAlive()) {
             ball.move(ball.getVectorX(), ball.getVectorY());
             borderReflections(ball);
-//            paddleReflections(ball);
+            paddleReflections(ball);
             destroyBrick(ball);
             pause(10);
         }
+        remove(ball);
     }
 
     private void destroyBrick(Ball ball) {
